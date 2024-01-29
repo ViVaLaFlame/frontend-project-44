@@ -8,7 +8,14 @@ const playEvenOrNot = () => {
   const taskEven = () => {
     const num = getRandomInt(0, 100);
     const question = `${num}`;
-    const correctAnswer = num % 2 === 0;
+    const isEven = num % 2 === 0;
+
+    let correctAnswer;
+    if (isEven) {
+      correctAnswer = 'yes';
+    } else {
+      correctAnswer = 'no';
+    }
     return [question, correctAnswer];
   };
   runGame(descriptionEven, taskEven);
