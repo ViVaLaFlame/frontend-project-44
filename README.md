@@ -9,4 +9,6 @@ ASCIINEMA screencapture brain-calc ----> https://asciinema.org/a/P9lj3yBaN3ZRj7A
 
 ASCIINEMA screencapture brain-gcd ----> https://asciinema.org/a/EbDgQrYTA9geedXHaSiWYB6QC
 
+ASCIINEMA screencapture brain-progression ----> https://asciinema.org/a/UO3aRcSulBwXgNbzZICTJGJum
+
 ASCIINEMA screencapture brain-prime ----> 
