@@ -6,3 +6,7 @@
 ASCIINEMA screencapture brain-even ----> https://asciinema.org/a/8x0Q6spw36Z4WGZdOW1ZkAVgI
 
 ASCIINEMA screencapture brain-calc ----> https://asciinema.org/a/P9lj3yBaN3ZRj7A89TOortWke
+
+ASCIINEMA screencapture brain-gcd ----> https://asciinema.org/a/EbDgQrYTA9geedXHaSiWYB6QC
+
+ASCIINEMA screencapture brain-prime ----> 
