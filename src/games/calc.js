@@ -1,43 +1,35 @@
-import readlineSync from 'readline-sync';
+#!/usr/bin/env node
+import runGame from '../index.js';
+import getRandomInt from '../utilities.js';
 
-const calcGame = () => {
-  console.log('What is the result of the expression?');
+const playCalc = () => {
+  const descriptionCalc = 'What is the result of the expression?';
 
-  let correctAnswersCount = 0;
+  const taskCalc = () => {
+    const num1 = getRandomInt(0, 100);
+    const num2 = getRandomInt(0, 100);
 
-  while (correctAnswersCount < 3) {
-    const arrayOfOperators = ['+', '-', '*'];
+    const operators = ['+', '-', '*'];
+    const operator = operators[getRandomInt(0, 3)];
 
-    const randomOperationIndex = Math.floor(Math.random() * arrayOfOperators.length);
-    const randomOperation = arrayOfOperators[randomOperationIndex];
-
-    const randomNumber = Math.floor(Math.random() * 100) + 1;
-    const randomNumber2 = Math.floor(Math.random() * 100) + 1;
-
-    const checkIt = () => {
-      let result = 0;
-      if (randomOperation === '+') {
-        result = randomNumber + randomNumber2;
-      } else if (randomOperation === '-') {
-        result = randomNumber - randomNumber2;
-      } else if (randomOperation === '*') {
-        result = randomNumber * randomNumber2;
-      }
-      return result;
-    };
-    const correctAnswer = checkIt();
-    console.log(`Question: ${randomNumber}${randomOperation}${randomNumber2}`);
-    const playersAnswer = readlineSync.question('Your answer: ');
-
-    if (parseInt(playersAnswer, 10) === correctAnswer) {
-      console.log('Correct!');
-      correctAnswersCount += 1;
-    } else {
-      console.log(`'${playersAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
-      console.log(`Let's try again, ${playerName}!`);
+    const question = `${num1} ${operator} ${num2}`;
+    let result = null;
+    switch (operator) {
+      case '+':
+        result = num1 + num2;
+        break;
+      case '-':
+        result = num1 - num2;
+        break;
+      case '*':
+        result = num1 * num2;
+        break;
+      default:
+        result = null;
     }
-  }
-  console.log(`Congratulations, ${playerName}`);
+    return [question, result.toString()];
+  };
+  runGame(descriptionCalc, taskCalc);
 };
 
-calcGame();
+export default playCalc;
