@@ -10,7 +10,7 @@ const playCalc = () => {
     const number2 = getRandomInt(0, 100);
 
     const operators = ['+', '-', '*'];
-    const operator = operators[getRandomInt(0, 3)];
+    const operator = operators[getRandomInt(0, 2)];
 
     const question = `Question: ${number1} ${operator} ${number2}`;
     let result = null;
