@@ -17,11 +17,12 @@ const runGame = (description, task) => {
       console.log('Correct!');
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'. \n "Let's try again, ${userName}!`);
-      return;
+      process.exit();
     }
   }
 
   console.log(`Congratulations, ${userName}!`);
+  process.exit();
 };
 
 export default runGame;
