@@ -7,7 +7,7 @@ const playEvenOrNot = () => {
 
   const taskEven = () => {
     const num = getRandomInt(0, 100);
-    const question = `${num}`;
+    const question = `Question: ${num}`;
     const isEven = num % 2 === 0;
 
     let correctAnswer;

@@ -12,7 +12,7 @@ const playCalc = () => {
     const operators = ['+', '-', '*'];
     const operator = operators[getRandomInt(0, 3)];
 
-    const question = `${num1} ${operator} ${num2}`;
+    const question = `Question: ${num1} ${operator} ${num2}`;
     let result = null;
     switch (operator) {
       case '+':
@@ -25,7 +25,7 @@ const playCalc = () => {
         result = num1 * num2;
         break;
       default:
-        result = null;
+        throw new Error(`Unexpected operator: ${operator}`);
     }
     return [question, result.toString()];
   };

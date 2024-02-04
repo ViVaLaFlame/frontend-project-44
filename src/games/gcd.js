@@ -9,7 +9,7 @@ const playGcd = () => {
     let num1 = getRandomInt(0, 100);
     let num2 = getRandomInt(0, 100);
 
-    const question = `${num1} ${num2}`;
+    const question = `Question: ${num1} ${num2}`;
 
     if (num2 > num1) {
       [num1, num2] = [num2, num1];

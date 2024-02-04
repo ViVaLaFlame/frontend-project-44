@@ -10,7 +10,7 @@ const runGame = (description, task) => {
 
   for (let i = 0; i < 3; i += 1) {
     const questionAndResult = task();
-    console.log(`Question: ${questionAndResult[0]}`);
+    console.log(questionAndResult[0]);
     const userAnswer = readlineSync.question('Your answer: ').toLowerCase();
     const correctAnswer = questionAndResult[1];
     if (userAnswer === correctAnswer) {

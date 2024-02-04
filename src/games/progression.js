@@ -24,7 +24,7 @@ const playProgression = () => {
     const firstInt = getRandomInt(5, 10);
     const step = getRandomInt(3, 5);
     const hiddenInt = getRandomInt(1, 10);
-    const question = genProgression(firstInt, step, hiddenInt);
+    const question = `Question: ${genProgression(firstInt, step, hiddenInt)}`;
     const correctAnswer = String(firstInt + hiddenInt * step);
     return [question, correctAnswer];
   };

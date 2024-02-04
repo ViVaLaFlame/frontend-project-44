@@ -7,7 +7,7 @@ const playPrime = () => {
 
   const taskPrime = () => {
     const number = getRandomInt(0, 100);
-    const question = `${number}`;
+    const question = `Question: ${number}`;
 
     const isPrime = () => {
       if (number <= 1) {
