@@ -12,7 +12,7 @@ const playCalc = () => {
     const operators = ['+', '-', '*'];
     const operator = operators[getRandomInt(0, 3)];
 
-    const question = `Question: ${num1} ${operator} ${num2}`;
+    const question = `Question: ${num1}${operator}${num2}`;
     let result = null;
     switch (operator) {
       case '+':
