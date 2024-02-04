@@ -6,23 +6,23 @@ const playCalc = () => {
   const descriptionCalc = 'What is the result of the expression?';
 
   const taskCalc = () => {
-    const num1 = getRandomInt(0, 100);
-    const num2 = getRandomInt(0, 100);
+    const number1 = getRandomInt(0, 100);
+    const number2 = getRandomInt(0, 100);
 
     const operators = ['+', '-', '*'];
     const operator = operators[getRandomInt(0, 3)];
 
-    const question = `Question: ${num1}${operator}${num2}`;
+    const question = `Question: ${number1} ${operator} ${number2}`;
     let result = null;
     switch (operator) {
       case '+':
-        result = num1 + num2;
+        result = number1 + number2;
         break;
       case '-':
-        result = num1 - num2;
+        result = number1 - number2;
         break;
       case '*':
-        result = num1 * num2;
+        result = number1 * number2;
         break;
       default:
         throw new Error(`Unexpected operator: ${operator}`);
